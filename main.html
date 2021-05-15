@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- Name: CAMACHO -->
+<html>
+  <head>
+    <title>Pharma</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="center">
+      <div class="logo"><img src="pharmalogo.jpg" /></div>
+      <div class="left">
+        <button class="pics" id="pic1" onclick="sellMed()"></button>
+        <br />
+        <button class="pics" id="pic2" onclick="updatePrice()" ></button>
+        <br />
+        <button class="pics" id="pic3" onclick="submit()"></button> <br />
+        <button class="pics" id="pic4" onclick="display()"></button>
+      </div>
+      <div class="right">
+        <form id="frm">
+          Brand Name: <br /><input
+            type="text"
+            id="BN"
+            onfocus="this.value=''"
+          /><br />
+          Generic Name:<br /><input
+            type="text"
+            id="GN"
+            onfocus="this.value=''"
+          /><br />
+          Stock: <br /><input
+            type="number"
+            id="Stk"
+            size="50"
+            onfocus="this.value=''"
+          /><br />
+          Price:<br />
+          <input
+            type="number"
+            id="Price"
+            size="30"
+            onfocus="this.value=''"
+          /><br />
+        </form>
+
+        <button type="button" class="Btn" id="addBtn" onclick="submit()">
+          Add
+        </button>
+        <button type="button" class="Btn" id="resetBtn" onclick="">Reset</button>
+      </div>
+    </div>
+    <div class="rightTable">
+      <button type="button" onclick="onDelete()" id="deleteBtn" class="Btn">
+        Delete
+      </button>
+      <!-- <button type="button" onclick="updatePrice()" id="updateBtn" class="Btn">
+        Update
+      </button> -->
+      <table id="table" border="1px">
+        <thead id="table-head">
+            <th>ID#</th>
+            <th>Brand Name</th>
+            <th>Generic Name</th>
+            <th>Stock</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </div>
+  </body>
+  <script src="main.js" type="text/javascript"></script>
+</html>
